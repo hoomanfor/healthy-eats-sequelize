@@ -28,15 +28,22 @@ router.post("/api/eats", function(request, response) {
     })
 });
 
-// router.put("/api/eats/:id", function(request, response) {
-//     model.update(request.body.consumed, request.params.id, function(data) {
-//         if (data.changedRows == 0) {
-//             return response.status(404).end();
-//         } else {
-//             return response.status(200).end();
-//         }
-//     })
-// })
+router.put("/api/eats/:id", function(request, response) {
+    // model.update(request.body.consumed, request.params.id, function(data) {
+    //     if (data.changedRows == 0) {
+    //         return response.status(404).end();
+    //     } else {
+    //         return response.status(200).end();
+    //     }
+    // })
+    Eat.update({
+        consumed: request.body.consumed
+    }, {
+        where: { id: request.params.id }
+    }).then((data) => {
+        response.status(200).end();
+    })
+})
 
 module.exports = router;
 
