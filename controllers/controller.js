@@ -17,11 +17,16 @@ router.get("/", function(request, response) {
     })
 });
 
-// router.post("/api/eats", function(request, response) {
-//     model.add(request.body.column, request.body.value, function(data) {
-//         response.status(200).end(); 
-//     })
-// });
+router.post("/api/eats", function(request, response) {
+    // model.add(request.body.column, request.body.value, function(data) {
+    //     response.status(200).end(); 
+    // })
+    Eat.create({
+        name: request.body.eat
+    }).then((data) => {
+        response.status(201).end();
+    })
+});
 
 // router.put("/api/eats/:id", function(request, response) {
 //     model.update(request.body.consumed, request.params.id, function(data) {
