@@ -1,24 +1,15 @@
-const mysql = require("mysql");
-let connection; 
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: process.env.PW,
-    database: "healthy_db"
-  });
-}
+const Sequelize = require("sequelize");
 
-connection.connect(error => {
-  if (error) {
-    console.error(`error connecting: ${error.stack}`);
-    return;
+const sequelize = new Sequelize("healthy_db", "root", process.env.PW, {
+  host: "localhost",
+  port: 3306,
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
   }
-  console.log(`connected as id ${connection.threadId}`);
 });
 
-module.exports = connection;
+module.exports = sequelize;

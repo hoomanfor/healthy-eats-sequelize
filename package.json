@@ -1,0 +1,28 @@
+{
+  "name": "healthy-eats-sequelize",
+  "version": "1.0.0",
+  "description": "Enter the name of a tasty food item and 'Add' it to your plate. You may decide to 'Eat' it or leave it on your plate. No pressure.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoomanfor/healthy-eats-sequelize.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoomanfor/healthy-eats-sequelize/issues"
+  },
+  "homepage": "https://github.com/hoomanfor/healthy-eats-sequelize#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  }
+}

@@ -3,8 +3,7 @@ $(function() {
         event.preventDefault(); 
         const eat = $("[name='eat']").val().trim();
         const newEat = {
-            "column": "name",
-            "value": eat
+            "eat": eat
         }
         if (eat === "") {
             $(".error").html("Please enter a food item.");

@@ -1,21 +1,19 @@
-const orm = require("../config/orm.js");
+const Sequelize = require("sequelize");
+const sequelize = require("../config/connection.js");
 
-const model = {
-    all: function(callback) {
-        orm.all("eats", function(data) {
-            callback(data);
-        })
+const Eat = sequelize.define("eats", {
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false
     },
-    add: function(column, value, callback) {
-        orm.add("eats", column, value, function(data) {
-            callback(data);
-        })
-    },
-    update: function(consumed, id, callback) {
-        orm.update("eats", consumed, id, function(data) {
-            callback(data);
-        })
+    consumed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
     }
-}
+}, {
+    freezeTableName: true
+});
 
-module.exports = model;
+Eat.sync();
+
+module.exports = Eat;
