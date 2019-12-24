@@ -1,0 +1,35 @@
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Healthy Eats</h1>
+    </div>
+    <div class="input-group">
+        <form>
+            <input class="input-text" placeholder="Pomegranate" type="text" name="eat"><button class="add" type="submit">Add</button>
+            <div  style="text-align: left; color:red; padding: 3px 0;" class="error"></div>
+        </form>
+    </div>
+</div>
+<div class="table">
+    <div class="row">
+        <div class="cell">
+            <h2><i class="fas fa-hand-holding-heart"></i>Plate</h2>
+            <ul id="plate">
+                {{#each eats}}
+                    {{#unless consumed}}
+                        <li>{{name}}<button class="consume" data-id="{{id}}">Eat</button></li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="cell">
+            <h2><i class="fas fa-drumstick-bite"></i>Eaten</h2>
+            <ul id="eaten">
+                {{#each eats}}
+                    {{#if consumed}}
+                        <li>{{name}}</li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

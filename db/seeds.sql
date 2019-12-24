@@ -1,0 +1,10 @@
+INSERT INTO eats (name, consumed) VALUES ("Edamame", 0);
+INSERT INTO eats (name, consumed) VALUES ("Cantaloupe", 0);
+INSERT INTO eats (name, consumed) VALUES ("Pomegranate", 0);
+INSERT INTO eats (name) VALUES ("Avocado");
+INSERT INTO eats (name, consumed) VALUES ("Cucumber", 0);
+INSERT INTO eats (name) VALUES ("Jerky");
+INSERT INTO eats (name, consumed) VALUES ("Blackberries", 0);
+INSERT INTO eats (name, consumed) VALUES ("Blueberries", 0);
+INSERT INTO eats (name, consumed) VALUES ("Cashews", 0);
+INSERT INTO eats (name, consumed) VALUES ("Pear", 0);
