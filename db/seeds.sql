@@ -8,3 +8,8 @@ INSERT INTO healthy_db.eat (name, consumed, createdAt, updatedAt) VALUES ("Black
 INSERT INTO healthy_db.eat (name, consumed, createdAt, updatedAt) VALUES ("Blueberries", 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 INSERT INTO healthy_db.eat (name, consumed, createdAt, updatedAt) VALUES ("Cashews", 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 INSERT INTO healthy_db.eat (name, consumed, createdAt, updatedAt) VALUES ("Pear", 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO healthy_db.moment (moment, createdAt, updatedAt) VALUES ("Morning", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO healthy_db.moment (moment, createdAt, updatedAt) VALUES ("Noon", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO healthy_db.moment (moment, createdAt, updatedAt) VALUES ("Afternoon", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO healthy_db.moment (moment, createdAt, updatedAt) VALUES ("Evening", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

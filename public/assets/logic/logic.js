@@ -1,4 +1,15 @@
 $(function() {
+    $("select").change(function() {
+        $("select").each(function() {
+            if ($(this).val()) {
+            let id = $(this).data("id");
+            $(".consume[data-id='" + id + "']").css("background-color", "#007bff");
+            } else {
+                let id = $(this).data("id");
+                $(".consume[data-id='" + id + "']").css("background-color", "grey");
+            }
+        });
+    })
     $("[type='submit']").on("click", function(event) {
         event.preventDefault(); 
         const eat = $("[name='eat']").val().trim();
@@ -19,7 +30,9 @@ $(function() {
         }
     });
     $(".consume").on("click", function(event) {
-        const id = $(this).data("id");
+        let id = $(this).data("id");
+        let selection = $(".moment-" + id).val();
+        if (selection) {
         const eaten = {
             "consumed": true
         };
@@ -31,5 +44,6 @@ $(function() {
             console.log("food item has been eaten!")
             location.reload(); 
         })
+    }
     })
 });

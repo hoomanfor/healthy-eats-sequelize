@@ -16,7 +16,16 @@
             <ul id="plate">
                 {{#each eats}}
                     {{#unless consumed}}
-                        <li>{{name}}<button class="consume" data-id="{{id}}">Eat</button></li>
+                        <li>{{name}}
+                            <select class="moment-{{id}}" data-id="{{id}}">
+                                <option value="">Select</option>
+                                <option value="1">Morning</option>
+                                <option value="2">Noon</option>
+                                <option value="3">Afternoon</option>
+                                <option value="4">Evening</option>
+                            </select>
+                            <button class="consume" data-id="{{id}}">Eat</button>
+                        </li>
                     {{/unless}}
                 {{/each}}
             </ul>

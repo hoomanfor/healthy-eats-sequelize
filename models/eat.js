@@ -11,5 +11,10 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         freezeTableName: true
     });
+
+    Eat.associate = (models) => {
+        Eat.belongsTo(models.Moment);
+    };
+
     return Eat;
 }

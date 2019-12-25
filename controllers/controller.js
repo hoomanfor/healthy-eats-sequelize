@@ -17,7 +17,8 @@ module.exports = (app) => {
 
     app.post("/api/eats", function(request, response) {
         db.Eat.create({
-            name: request.body.eat
+            name: request.body.eat,
+            // MomentId: 1
         }).then((data) => {
             response.status(201).end();
         })

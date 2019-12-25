@@ -69,10 +69,11 @@ body, html {
 }
 
 .consume {
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    border: 1px solid transparent;
+    background-color: grey; 
     border-radius: .25rem;
     font-weight: bold; 
-    border: 1px solid #007bff;
     color: white; 
     display: inline-block;
     transition: color .15s ease-in-out,
