@@ -31,10 +31,11 @@ $(function() {
     });
     $(".consume").on("click", function(event) {
         let id = $(this).data("id");
-        let selection = $(".moment-" + id).val();
-        if (selection) {
+        let moment = $(".moment-" + id).val();
+        if (moment) {
         const eaten = {
-            "consumed": true
+            "consumed": true,
+            "moment": moment
         };
         $.ajax({
             url: "/api/eats/" + id,

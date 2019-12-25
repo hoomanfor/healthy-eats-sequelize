@@ -26,7 +26,8 @@ module.exports = (app) => {
 
     app.put("/api/eats/:id", function(request, response) {
         db.Eat.update({
-            consumed: request.body.consumed
+            consumed: request.body.consumed,
+            MomentId: request.body.moment
         }, {
             where: { id: request.params.id }
         }).then((data) => {
