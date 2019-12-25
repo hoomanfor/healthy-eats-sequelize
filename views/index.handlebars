@@ -35,7 +35,7 @@
             <ul id="eaten">
                 {{#each eats}}
                     {{#if consumed}}
-                        <li>{{name}}</li>
+                        <li>{{name}} was eaten @ {{Moment.moment}}</li>
                     {{/if}}
                 {{/each}}
             </ul>

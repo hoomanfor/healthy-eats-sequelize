@@ -7,10 +7,11 @@ const db = require("../models");
 module.exports = (app) => {
 
     app.get("/", function(request, response) {
-        db.Eat.findAll({}).then((data) => {
+        db.Eat.findAll({ include: [db.Moment] }).then((data) => {
             const eats = {
                 "eats": data
             }
+            // response.json(eats);
             response.render("index", eats);
         })
     });
@@ -18,7 +19,6 @@ module.exports = (app) => {
     app.post("/api/eats", function(request, response) {
         db.Eat.create({
             name: request.body.eat,
-            // MomentId: 1
         }).then((data) => {
             response.status(201).end();
         })
