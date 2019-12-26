@@ -1,5 +1,0 @@
-Morning
-Noon
-Afternoon
-Evening
-
