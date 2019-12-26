@@ -7,6 +7,15 @@ body, html {
     font-family: 'Baskervville', serif;
 }
 
+span {
+    font-size: 1rem; 
+    color: #0062cc;
+    border: 1px solid grey;
+    border-radius: 4px; 
+    display: inline-block; 
+    padding: .25rem; 
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner.jpg");
   height: 40%;
@@ -71,6 +80,8 @@ body, html {
 .consume {
     /* background-color: #007bff; */
     border: 1px solid transparent;
+    padding: .25rem .5rem; 
+    font-size: 1rem; 
     background-color: grey; 
     border-radius: .25rem;
     font-weight: bold; 
@@ -87,6 +98,13 @@ body, html {
     background-color: #0069d9;
     border-color: #0062cc;
     cursor: pointer; 
+}
+
+select {
+    -webkit-appearance: menulist-button;
+    font-size: 1rem; 
+    display: inline-block; 
+    height: 1.8rem; 
 }
 
 h1 {
@@ -121,11 +139,7 @@ li {
     line-height: 140%;
 }
 
-.consume {
-    margin: 0 0 0 4px; 
-}
-
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1200px) {
     .table {
       width: 80%; 
     }
@@ -138,6 +152,41 @@ li {
         font-size: 16px;
     }
   }
+
+@media only screen and (max-width: 790px) {
+    .table {
+      width: 100%; 
+    }
+    h1 {
+        font-size: 2.4rem; 
+    }
+    .input-text,
+    .add {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 720px) {
+    .table {
+      width: 100%;
+      font-size: .8rem; 
+    }
+    span,
+    select,
+    .consume {
+        font-size: .8rem; 
+    }
+    h1 {
+        font-size: 2.4rem; 
+    }
+    .input-text,
+    .add {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+
 
 /* ----
 font-family: 'Girassol', cursive;

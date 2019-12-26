@@ -16,7 +16,7 @@
             <ul id="plate">
                 {{#each eats}}
                     {{#unless consumed}}
-                        <li>{{name}}
+                        <li><span>{{name}}</span>
                             <select class="moment-{{id}}" data-id="{{id}}">
                                 <option value="">Select</option>
                                 <option value="1">Morning</option>
@@ -35,7 +35,7 @@
             <ul id="eaten">
                 {{#each eats}}
                     {{#if consumed}}
-                        <li>{{name}} was eaten @ {{Moment.moment}}</li>
+                        <li><span>{{name}}</span> was eaten during the <span>{{Moment.moment}}</span></li>
                     {{/if}}
                 {{/each}}
             </ul>

@@ -1,13 +1,10 @@
-// const express = require("express");
-// const router = express.Router();
-// const Eat = require("../models/model.js");
-
 const db = require("../models");
 
 module.exports = (app) => {
 
     app.get("/", function(request, response) {
-        db.Eat.findAll({ include: [db.Moment] }).then((data) => {
+        db.Eat.findAll({ include: [db.Moment],
+        order: [["name", "ASC"]] }).then((data) => {
             const eats = {
                 "eats": data
             }
